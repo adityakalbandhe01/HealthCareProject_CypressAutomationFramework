@@ -22,6 +22,8 @@ cy.get('#txt_comment').click({force: true});
 cy.get('#txt_comment').type('Tesst')
 cy.get('#btn-book-appointment').click()
 
+//Step 5 Assert the result
+
 
 cy.get('h2').contains('Appointment Confirmation')
 cy.get('#comment').contains('Tesst')
