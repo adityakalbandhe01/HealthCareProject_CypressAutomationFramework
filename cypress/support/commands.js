@@ -44,3 +44,22 @@ Cypress.Commands.add("login", (username, password) => {
 
   cy.contains("#logInModal button", "Log in").click()
 })
+
+
+//sauce demo
+
+
+Cypress.Commands.add("login", (username, password) => {
+  cy.get("#user-name")
+    .should("be.visible")
+    .clear()
+    .type(username)
+
+  cy.get("#password")
+    .clear()
+    .type(password)
+
+  cy.get("#login-button")
+    .should("be.enabled")
+    .click()
+})
