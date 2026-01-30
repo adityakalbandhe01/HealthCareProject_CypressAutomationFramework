@@ -8,6 +8,8 @@ describe('Cura Make Appointment', function () {
 
     // Step 3: Login
     cy.get('#txt-username').type('John Doe');
+    //djdjdj
+    //jdjd
     cy.get('#txt-password').type('ThisIsNotAPassword');
     cy.get('#btn-login').click();
 
