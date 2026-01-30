@@ -11,20 +11,21 @@ describe("SauceDemo Stable E2E Flow", () => {
 
   it("Login → Add to Cart → Checkout → Logout", () => {
 
-    // 🔹 Login
+    // 🔹 Login scenario
     cy.login(user.username, user.password)
+
 
     cy.url().should("include", "/inventory.html")
     cy.contains("Products").should("be.visible")
 
-    // 🔹 Add product to cart
+    // 🔹 Add product to cart 
     cy.get('[data-test="add-to-cart-sauce-labs-backpack"]').click()
 
     cy.get(".shopping_cart_badge")
       .should("be.visible")
       .and("contain", "1")
 
-    // 🔹 Go to cart
+    // 🔹 Go to cart and click
     cy.get(".shopping_cart_link").click()
     cy.contains("Sauce Labs Backpack").should("be.visible")
 
