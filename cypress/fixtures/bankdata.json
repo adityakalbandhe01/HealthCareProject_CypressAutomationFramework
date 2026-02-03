@@ -1,0 +1,15 @@
+{
+  "username": "john",
+  "password": "demo",
+  "transferAmount": "100",
+  "billPay": {
+    "name": "Electric Company",
+    "street": "MG Road",
+    "city": "Pune",
+    "state": "MH",
+    "zip": "411001",
+    "phone": "9999999999",
+    "account": "12345",
+    "amount": "50"
+  }
+}
